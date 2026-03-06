@@ -13,7 +13,17 @@ Initialized empty Git repository in /Users/hriatijan.mijalkovvista-point.io/Docu
 ➜  KIII-labs git:(master) ✗ git branch
 ➜  KIII-labs git:(master) ✗ git branch --list
 ➜  KIII-labs git:(master) ✗ git branch branch-1
+fatal: not a valid object name: 'master'
+➜  KIII-labs git:(master) ✗ git status
+On branch master
 
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        solutions/
+
+nothing added to commit but untracked files present (use "git add" to track)
 ➜  KIII-labs git:(master) ✗ git checkout -b branch-1
 Switched to a new branch 'branch-1'
 ➜  KIII-labs git:(branch-1) ✗ git branch --list       
@@ -26,3 +36,50 @@ No commits yet
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
         solutions/
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  KIII-labs git:(branch-1) ✗ git checkout -b master
+Switched to a new branch 'master'
+➜  KIII-labs git:(master) ✗ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        solutions/
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  KIII-labs git:(master) ✗ git branch
+➜  KIII-labs git:(master) ✗ git branch --list     
+➜  KIII-labs git:(master) ✗ git add solutions/act-02-git-lab/t1-branching-basics.txt 
+➜  KIII-labs git:(master) ✗ git commit -m "Initial message"
+[master (root-commit) bcd261d] Initial message
+ 1 file changed, 28 insertions(+)
+ create mode 100644 solutions/act-02-git-lab/t1-branching-basics.txt
+➜  KIII-labs git:(master) git switch branch-1
+fatal: invalid reference: branch-1
+➜  KIII-labs git:(master) ✗ git checkout -b  branch-1
+Switched to a new branch 'branch-1'
+➜  KIII-labs git:(branch-1) ✗ git branch --list
+➜  KIII-labs git:(branch-1) ✗ git add solutions/act-02-git-lab/t1-branching-basics.txt 
+➜  KIII-labs git:(branch-1) ✗ git commit -m "Added changes for the new branch"
+[branch-1 fafd89d] Added changes for the new branch
+ 1 file changed, 10 insertions(+)
+➜  KIII-labs git:(branch-1) git switch master                                        
+error: Your local changes to the following files would be overwritten by checkout:
+        solutions/act-02-git-lab/t1-branching-basics.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+➜  KIII-labs git:(branch-1) ✗ git add solutions/act-02-git-lab/t1-branching-basics.txt 
+➜  KIII-labs git:(branch-1) ✗ git switch master                                       
+error: Your local changes to the following files would be overwritten by checkout:
+        solutions/act-02-git-lab/t1-branching-basics.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+➜  KIII-labs git:(branch-1) ✗ git commit -m "Added changes"
+[branch-1 66e8c3a] Added changes
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+➜  KIII-labs git:(branch-1) git switch master            
+Switched to branch 'master'
+➜  KIII-labs git:(master) 
