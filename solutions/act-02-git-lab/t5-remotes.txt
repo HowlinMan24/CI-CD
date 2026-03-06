@@ -1,0 +1,43 @@
+➜  KIII-labs git:(master) ✗ git remote -v
+➜  KIII-labs git:(master) ✗ git remote add origin https://github.com/HowlinMan24/CI-CD.git
+
+➜  KIII-labs git:(master) ✗ git remote -v
+origin  https://github.com/HowlinMan24/CI-CD.git (fetch)
+origin  https://github.com/HowlinMan24/CI-CD.git (push)
+➜  KIII-labs git:(master) ✗ git branch -M master
+➜  KIII-labs git:(master) ✗ git push origin master
+Enumerating objects: 26, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (26/26), 3.15 KiB | 3.15 MiB/s, done.
+Total 26 (delta 8), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (8/8), done.
+To https://github.com/HowlinMan24/CI-CD.git
+ * [new branch]      master -> master
+➜  KIII-labs git:(master) ✗ B
+
+➜  KIII-labs git:(master) ✗ git add solutions/act-02-git-lab/t5-remotes.txt 
+➜  KIII-labs git:(master) ✗ git commit -m "Added remote repo"
+[master a44436c] Added remote repo
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 solutions/act-02-git-lab/t5-remotes.txt
+➜  KIII-labs git:(master) git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+➜  KIII-labs git:(master) git push --set-upstream origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 430 bytes | 430.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/HowlinMan24/CI-CD.git
+   d45b3dd..a44436c  master -> master
+branch 'master' set up to track 'origin/master'.
