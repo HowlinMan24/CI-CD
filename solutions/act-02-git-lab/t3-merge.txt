@@ -1,0 +1,41 @@
+➜  KIII-labs git:(branch-1) ✗ git commit -m "Added changes for the new branch"
+[branch-1 fafd89d] Added changes for the new branch
+ 1 file changed, 10 insertions(+)
+➜  KIII-labs git:(branch-1) git switch master                                        
+error: Your local changes to the following files would be overwritten by checkout:
+        solutions/act-02-git-lab/t1-branching-basics.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+➜  KIII-labs git:(branch-1) ✗ git add solutions/act-02-git-lab/t1-branching-basics.txt 
+➜  KIII-labs git:(branch-1) ✗ git switch master                                       
+error: Your local changes to the following files would be overwritten by checkout:
+        solutions/act-02-git-lab/t1-branching-basics.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+➜  KIII-labs git:(branch-1) ✗ git commit -m "Added changes"
+[branch-1 66e8c3a] Added changes
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+➜  KIII-labs git:(branch-1) git switch master            
+Switched to branch 'master'
+➜  KIII-labs git:(master) git add solutions/act-02-git-lab/t1-branching-basics.txt
+➜  KIII-labs git:(master) git commit -m "Added all changesD"                      
+On branch master
+nothing to commit, working tree clean
+➜  KIII-labs git:(master) git add solutions/act-02-git-lab/t1-branching-basics.txt
+➜  KIII-labs git:(master) ✗ git commit -m "Added all changesD"                      
+[master 2a0eb3c] Added all changesD
+ 1 file changed, 57 insertions(+)
+➜  KIII-labs git:(master) clear
+➜  KIII-labs git:(master) ✗ git branch topic
+➜  KIII-labs git:(master) ✗ git branch
+➜  KIII-labs git:(master) ✗ git switch topic
+Switched to branch 'topic'
+➜  KIII-labs git:(topic) ✗ 
+
+➜  KIII-labs git:(topic) ✗ git add solutions/act-02-git-lab/t3-merge.txt                                             
+➜  KIII-labs git:(topic) ✗ git commit -m "Initial commit on the topic branch"
+[topic 04c1bb0] Initial commit on the topic branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 solutions/act-02-git-lab/t3-merge.txt
+➜  KIII-labs git:(topic) git switch master
+Switched to branch 'master'
