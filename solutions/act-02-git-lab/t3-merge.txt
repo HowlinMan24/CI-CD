@@ -39,3 +39,19 @@ Switched to branch 'topic'
  create mode 100644 solutions/act-02-git-lab/t3-merge.txt
 ➜  KIII-labs git:(topic) git switch master
 Switched to branch 'master'
+
+➜  KIII-labs git:(master) git merge topic
+Auto-merging solutions/act-02-git-lab/t3-merge.txt
+Merge made by the 'ort' strategy.
+➜  KIII-labs git:(master) git log --oneline --decorate --graph --all
+
+*   884ac2e (HEAD -> master) Merge branch 'topic'
+|\  
+| * 04c1bb0 (topic) Initial commit on the topic branch
+* | aaa54d1 Initial commit of the t3 file
+|/  
+* 2a0eb3c Added all changesD
+| * 66e8c3a (branch-1) Added changes
+| * fafd89d Added changes for the new branch
+|/  
+* bcd261d Initial message
